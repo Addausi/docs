@@ -2,6 +2,9 @@
 
 Package manager | YAML value      | Supported versions | Version updates | Security updates | Private repositories | Private registries | Vendoring |
 ---------------|------------------|------------------|:---:|:---:|:---:|:---:|:---:|
+| {% ifversion dependabot-bazel-support %} |
+Bazel | `bazel`         | v7, v8, v9              | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| {% endif %} |
 | {% ifversion dependabot-bun-support %} |
 [Bun](#bun) | `bun`         | >=v1.1.39               | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | {% endif %} |
@@ -114,6 +117,7 @@ For more information about using {% data variables.product.prodname_dependabot_v
 {% data variables.product.prodname_dependabot %} doesn't run Gradle but supports updates to the following files:
 * `build.gradle`, `build.gradle.kts` (for Kotlin projects)
 * `gradle/libs.versions.toml` (for projects using a standard Gradle version catalog)
+* `gradle.lockfile` (for projects using Gradle dependency locking)
 * Files included via the `apply` declaration that have `dependencies` in the filename. Note that `apply` does not support `apply to`, recursion, or advanced syntaxes (for example, Kotlin's `apply` with `mapOf`, filenames defined by property).
 
 {% data variables.product.prodname_dependabot %} uses information from the `pom.xml` file of dependencies to add links to release information in update pull requests. If the information is omitted from the `pom.xml` file, then it cannot be included in {% data variables.product.prodname_dependabot %} pull requests, see [AUTOTITLE](/code-security/dependabot/ecosystems-supported-by-dependabot/optimizing-java-packages-dependabot).
@@ -128,9 +132,9 @@ For {% data variables.product.prodname_dependabot_security_updates %}, Gradle su
 
 {% data variables.product.prodname_dependabot %} supports using a username and password for registries. For more information, see [AUTOTITLE](/code-security/dependabot/working-with-dependabot/configuring-access-to-private-registries-for-dependabot#helm-registry).
 
-{% data variables.product.prodname_dependabot %} works with any OCI-compliant registries that implement the Open Container Initiative (OCI) Distribution Specification.
+The `helm-registry` type only supports HTTP Basic Auth and does not support OCI-compliant registries. If you need to access an OCI-compliant registry for Helm charts, configure a `docker-registry` instead. For more information, see [AUTOTITLE](/code-security/dependabot/working-with-dependabot/configuring-access-to-private-registries-for-dependabot#docker-registry).
 
-When configuring Dependabot for Helm charts, it will also automatically update the Docker images referenced within those charts, ensuring that both the chart versions and their contained images stay up to date.
+When configuring {% data variables.product.prodname_dependabot %} for Helm charts, it will also automatically update the Docker images referenced within those charts, ensuring that both the chart versions and their contained images stay up to date.
 
 #### Maven
 

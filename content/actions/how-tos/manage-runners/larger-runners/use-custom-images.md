@@ -8,6 +8,8 @@ product: '{% data variables.actions.github_hosted_larger_runners %} are only ava
 
 ---
 
+{% data reusables.actions.custom-images-public-preview-note %}
+
 ## Custom images
 
 You can create a custom image to define the exact environment that your {% data variables.actions.github_hosted_larger_runners %} use. Custom images let you preinstall tools, dependencies, and configurations to speed up workflows and improve consistency across jobs.
@@ -88,24 +90,6 @@ jobs:
     steps:
       # Add any steps to download and setup any dependencies here
 ```
-
-### Conditionals
-
-The `snapshot` keyword supports conditional execution using the `if` keyword around the snapshot mapping. You can use conditions to control when an image snapshot is created. For example, the following job skips image creation for tag builds.
-
-```yaml
-jobs: 
-  build:
-    runs-on: my-image-generation-runner
-    snapshot: 
-        if: {% raw %}${{ ! startsWith(github.ref, 'refs/tags/') }}{% endraw %}
-        image-name: my-custom-image
-        version: 2.*
-    steps:
-      # Add any steps to download and setup any dependencies here
-```
-
-For more information about the `if` keyword, see [AUTOTITLE](/actions/writing-workflows/choosing-when-your-workflow-runs/using-conditions-to-control-job-execution).
 
 ## Versioning
 

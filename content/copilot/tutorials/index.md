@@ -21,11 +21,14 @@ children:
   - /explore-pull-requests
   - /write-tests
   - /refactor-code
+  - /optimize-code-reviews
+  - /reduce-technical-debt
   - /review-ai-generated-code
   - /learn-a-new-language
   - /modernize-legacy-code
   - /migrate-a-project
   - /plan-a-project
+  - /vibe-coding
   - /upgrade-projects
 redirect_from:
   - /copilot/using-github-copilot/guides-on-using-github-copilot

@@ -1,5 +1,57 @@
 # Docs changelog
 
+**9 December 2025**
+
+We published [a guide](https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/enterprise-best-practices/use-innersource) to help customers set up innersource practices in their enterprise. The guide also provides a conceptual introduction to features like internal visibility, organization base permissions, and roles for external collaborators.
+
+<hr>
+
+**8 December 2025**
+
+We've added a new tutorial on how to use Copilot Chat to write code for you. The tutorial steps you through how to create a time tracking web app using only prompts in Copilot Chat.
+
+[Vibe coding with GitHub Copilot](https://docs.github.com/en/copilot/tutorials/vibe-coding)
+
+<hr>
+
+**5 December 2025**
+
+We added documentation for the new Code generation tab, which is part of Copilot usage metrics. The docs now describe how to view code generation insights across your enterprise, compare user-initiated and agent-initiated behavior, and understand differences across models, languages, and modes. We also updated related conceptual and reference content for consistency and scannability. See [Viewing the code generation dashboard](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/view-code-generation).
+
+<hr>
+
+**2 December 2025**
+
+You can now share Copilot Spaces publicly. See [Collaborating with others using GitHub Copilot Spaces](https://docs.github.com/en/copilot/how-tos/provide-context/use-copilot-spaces/collaborate-with-others#sharing-spaces).
+
+You can also now add files to a Copilot Space directly from the code view on GitHub, so you don't need to break your flow when building context for your space. See [Creating GitHub Copilot Spaces](https://docs.github.com/en/copilot/how-tos/provide-context/use-copilot-spaces/create-copilot-spaces#adding-context-as-youre-working).
+
+<hr>
+
+**25 November 2025**
+
+We've added details of files that are excluded from Copilot code reviews. 
+
+See [About GitHub Copilot code review](https://docs.github.com/copilot/concepts/agents/code-review#excluded-files).
+
+<hr>
+
+**24 November 2025**
+
+We've added a new tutorial on burning down technical debt in a project: 
+
+[Using GitHub Copilot to reduce technical debt](https://docs.github.com/en/copilot/tutorials/reduce-technical-debt)
+
+The addition of this tutorial was prompted by a presentation by Brittany Ellich at this year's GitHub Universe conference: [Tackling your tech debt with Copilot coding agent](https://www.youtube.com/watch?v=LafpndhNC_E), and is based on a GitHub community post by Akash Sharma: [Stop Letting Technical Debt Slow You Down](https://github.com/orgs/community/discussions/178975).
+
+<hr>
+
+**13 November 2025**
+
+We've published a new tutorial on [using custom instructions for Copilot code review](https://docs.github.com/copilot/tutorials/use-custom-instructions). In this tutorial you'll learn how to write effective custom instructions that help Copilot provide more relevant and actionable code reviews.
+
+<hr>
+
 **31 October 2025**
 
 A large amount of new information was added to the GitHub documentation website to coincide with the GitHub Universe 2025 conference. Here are links to some of the new and updated articles.
